@@ -5,9 +5,10 @@ export default function UserList() {
 
     // variables
     const [users, setUsers] = useState([]);
+    const baseUrl = process.env.BACKEND_URL;
 
     useEffect(() => {
-        axios.get('/api/users')
+        axios.get(`${baseUrl}/api/users`)
             .then((res) => setUsers(res.data))
             .catch((err) => console.error('Error fetching users:', err));
     }, []);

@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-export default function Home() {
+export default function Nav() {
     const navigate = useNavigate();
 
     return (
@@ -11,12 +11,12 @@ export default function Home() {
             </header>
 
             <main>
-                <h1 className="text-6xl sm:text-7xl md:text-9xl font-extrabold text-white mb-14">
-                    <span className="block leading-[0.8em]">TRACK</span>
-                    <span className="block leading-[0.8em] bg-gradient-to-r from-cyan-400 via-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent animate-pulse">LIFT</span>
-                    <span className="block leading-[0.8em]">GROW</span>
+                <h1 className="text-7xl font-extrabold text-white mb-6">
+                    Choose Your Path
                 </h1>
-                <p className="text-3xl lg:text-4xl text-gray-300 leading-relaxed font-light max-w-4xl mx-auto mb-16">The most beautiful way to log your workouts.</p>
+                <p className="text-2xl text-gray-300 leading-relaxed font-light max-w-4xl mx-auto mb-16">
+                    What would you like to do?
+                </p>
 
                 <button
                     onClick={() => navigate('/nav')}

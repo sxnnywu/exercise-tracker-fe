@@ -6,12 +6,13 @@ export default function CreateUser() {
     // variables
     const [username, setUsername] = useState('');
     const [createdUser, setCreatedUser] = useState(null);
+    const baseUrl = process.env.BACKEND_URL;
 
     // handle submit function
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/api/users', { username });
+            const response = await axios.post(`${baseUrl}/api/users`, { username });
             setCreatedUser(response.data);
             setUsername('');
         } catch (error) {

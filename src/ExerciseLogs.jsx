@@ -5,9 +5,10 @@ import axios from 'axios';
 export default function ExerciseLogs() {
   const { id } = useParams();
   const [log, setLog] = useState(null);
+  const baseUrl = process.env.BACKEND_URL;
 
   useEffect(() => {
-    axios.get(`/api/users/${id}/logs`)
+    axios.get(`${baseUrl}/api/users/${id}/logs`)
       .then((res) => setLog(res.data))
       .catch((err) => console.error(err));
   }, [id]);

@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import Home from './Home';
+import Nav from './Nav';
 import CreateUser from './CreateUser';
 import UserList from './UserList';
 import LogExercise from './LogExercise';
@@ -17,6 +18,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/nav" element={<Nav />} />
         <Route path="/create-user" element={<CreateUser />} />
         <Route path="/users" element={<UserList />} />
         <Route path="/log-exercise" element={<LogExercise />} />

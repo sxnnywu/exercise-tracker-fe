@@ -11,6 +11,7 @@ export default function UserList() {
         date: ''
     });
     const [result, setResult] = useState(null);
+    const baseUrl = process.env.BACKEND_URL;
 
     const handleChange = (e) => {
         setForm({
@@ -22,7 +23,7 @@ export default function UserList() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/api/exercise', form);
+            const response = await axios.post(`${baseUrl}/api/exercise`, form);
             setResult(response.data);
             setForm({
                 userId: '',
