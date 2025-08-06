@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { FaUserPlus, FaUsers, FaDumbbell, FaChartBar } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 export default function Nav() {
     const navigate = useNavigate();
@@ -47,7 +48,11 @@ export default function Nav() {
                 </button>
             </header>
 
-            <main>
+            <motion.main
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+            >
                 <h1 className="text-7xl font-extrabold text-white mb-6">
                     Choose Your Path
                 </h1>
@@ -72,7 +77,7 @@ export default function Nav() {
                         </div>
                 ))}
                 </div>
-            </main>
+            </motion.main>
 
             <footer className="w-full bg-gray-50 mt-12 py-10 px-6 text-black text-center text-md">
                 Coded with 💖 by Sunny Wu
