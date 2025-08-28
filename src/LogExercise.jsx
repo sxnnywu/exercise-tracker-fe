@@ -51,6 +51,8 @@ export default function LogExercise() {
 
             setResult(response.data);
 
+            setTimeout(() => setResult(null), 2000);
+
             setForm({
                 userId: '',
                 description: '',
