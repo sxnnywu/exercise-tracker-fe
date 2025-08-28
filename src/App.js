@@ -22,7 +22,7 @@ function App() {
         <Route path="/create-user" element={<CreateUser />} />
         <Route path="/list-users" element={<ListUsers />} />
         <Route path="/log-exercise" element={<LogExercise />} />
-        <Route path="/logs/:id" element={<ExerciseLogs />} />
+        <Route path="/view-logs" element={<ExerciseLogs />} />
       </Routes>
     </Router>
   );
