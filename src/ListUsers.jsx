@@ -17,6 +17,7 @@ export default function ListUsers() {
         const fetchUsers = async () => {
             try {
                 const res = await axios.get(`${baseUrl}/api/users`);
+                console.log(res.data);
                 setUsers(res.data);
             } catch (err) {
                 setError('Failed to fetch users');
