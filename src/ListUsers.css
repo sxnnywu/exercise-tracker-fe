@@ -28,3 +28,19 @@
     width: 100%;
     flex: 1;
 }
+
+.list-users p{
+    color:azure;
+    font-size: 1.4rem;
+}
+
+.list-users li{
+    display: inline-block;
+    color: black;
+    max-width: 300px;
+    padding: 5px;
+    margin: 8px;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    background-color: rgb(222, 222, 222);
+}

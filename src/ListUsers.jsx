@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaUsers } from 'react-icons/fa';
@@ -8,6 +9,24 @@ export default function ListUsers() {
 
     const navigate = useNavigate();
     const baseUrl = process.env.REACT_APP_BACKEND_URL;
+
+    const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                const res = await axios.get(`${baseUrl}/api/users`);
+                setUsers(res.data);
+            } catch (err) {
+                setError('Failed to fetch users');
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchUsers();
+    }, [baseUrl]);
 
     return (
         <div className="list-users">
@@ -28,6 +47,17 @@ export default function ListUsers() {
             >
                 <div className="container">
                     <h2>All Users</h2>
+
+                    {loading && <p>Loading users...</p>}
+                    {error && <p>{error}</p>}
+
+                    <ul>
+                        {users.map((user) => (
+                            <li key={user.id}>
+                                {user.username}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </motion.main>
 
