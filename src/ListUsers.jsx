@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaUsers } from 'react-icons/fa';
 import './ListUsers.css';
 import axios from 'axios';
 
@@ -53,7 +52,7 @@ export default function ListUsers() {
 
                     <ul>
                         {users.map((user) => (
-                            <li key={user.id}>
+                            <li key={user._id}>
                                 {user.username}
                             </li>
                         ))}

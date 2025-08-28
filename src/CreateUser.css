@@ -62,19 +62,19 @@
     transition: transform 0.3s ease;
 }
 
-.success{
+.create-user .success{
     display: flex;
     flex-direction: column;
     margin: 20px;
 }
 
-.success h3{
+.create-user h3{
     color: white;
     font-weight: 500;
    
 }
 
-.success p{
+.create-user .success p{
     color: white;
     font-size: 0.9rem;
     font-weight: 300;
