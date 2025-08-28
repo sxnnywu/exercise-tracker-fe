@@ -1,0 +1,30 @@
+.list-users{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    min-height: 110vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.list-users header,
+.list-users footer {
+    width: 100%;
+}
+
+.list-users h2{
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.list-users .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    flex: 1;
+}

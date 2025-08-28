@@ -9,7 +9,7 @@ import {
 import Home from './Home';
 import Nav from './Nav';
 import CreateUser from './CreateUser';
-import UserList from './UserList';
+import ListUsers from './ListUsers';
 import LogExercise from './LogExercise';
 import ExerciseLogs from './ExerciseLogs';
 
@@ -20,7 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/nav" element={<Nav />} />
         <Route path="/create-user" element={<CreateUser />} />
-        <Route path="/users" element={<UserList />} />
+        <Route path="/list-users" element={<ListUsers />} />
         <Route path="/log-exercise" element={<LogExercise />} />
         <Route path="/logs/:id" element={<ExerciseLogs />} />
       </Routes>
